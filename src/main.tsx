@@ -1,13 +1,16 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './styles/index.css'
-import App from './App.tsx'
-import { CartProvider } from './context/CartContext'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import './styles/index.css'; // Tailwind styles
+import { CategoryProvider } from './context/CategoryContext';
+import { CartProvider } from './context/CartContext';
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
     <CartProvider>
-      <App />
+      <CategoryProvider>
+        <App />
+      </CategoryProvider>
     </CartProvider>
-  </StrictMode>,
-)
+  </React.StrictMode>
+);

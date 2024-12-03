@@ -2,8 +2,8 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-secondary text-gray-300 text-center py-4">
-      &copy; 2023 Product Catalog
+    <footer className="bg-primary text-green-600 text-center py-4">
+      Made By Rotari Cristian
     </footer>
   );
 };
